@@ -1,20 +1,20 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import s from './FriendListItem.module.css';
+import styles from './FriendListItem.module.css';
 
 export default function FriendCard({ avatar, name, isOnline }) {
-  const activeClass = isOnline ? s.online : s.offline;
+  const activeClass = isOnline ? styles.online : styles.offline;
 
   return (
     <Fragment>
-      <span className={[s.status, activeClass].join(' ')}>{isOnline}</span>
+      <span className={[styles.status, activeClass].join(' ')}>{isOnline}</span>
       <img
-        className={s.avatar}
+        className={styles.avatar}
         src={avatar}
         alt={`avatar of + {name}`}
         width="50"
       />
-      <p className={s.name}>{name}</p>
+      <p className={styles.name}>{name}</p>
     </Fragment>
   );
 }

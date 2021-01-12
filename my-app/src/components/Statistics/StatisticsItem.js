@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
-import s from './StatisticsItem.module.css';
+import styles from './StatisticsItem.module.css';
 
 export default function StatisticsItem({ label, percentage }) {
   return (
     <Fragment>
-      <span className={s.label}>{label}</span>
-      <span className={s.percentage}>{percentage}%</span>
+      <span className={styles.label}>{label}</span>
+      <span className={styles.percentage}>{percentage}%</span>
     </Fragment>
   );
 }
