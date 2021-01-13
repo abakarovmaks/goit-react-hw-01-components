@@ -30,11 +30,17 @@ export default function Profile({ name, tag, location, avatar, stats }) {
   );
 }
 
+Profile.defaultProps = {
+  tag: 'Пользователь',
+  location: 'Киев',
+  avatar: 'https://vk-wiki.ru/wp-content/uploads/2019/06/user-1.png',
+};
+
 Profile.propTypes = {
   name: PropTypes.string.isRequired,
-  tag: PropTypes.string.isRequired,
-  location: PropTypes.string.isRequired,
-  avatar: PropTypes.string.isRequired,
+  tag: PropTypes.string,
+  location: PropTypes.string,
+  avatar: PropTypes.string,
   stats: PropTypes.shape({
     followers: PropTypes.number.isRequired,
     views: PropTypes.number.isRequired,

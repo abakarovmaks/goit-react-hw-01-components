@@ -27,6 +27,16 @@ export default function TransactionHistory({ items }) {
   );
 }
 
+// TransactionHistory.defaultProps = {
+//   items: PropTypes.arrayOf(
+//     PropTypes.shape({
+//       type: 0,
+//       amount: 0,
+//       currency: 0,
+//     }),
+//   ),
+// };
+
 TransactionHistory.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.shape({
