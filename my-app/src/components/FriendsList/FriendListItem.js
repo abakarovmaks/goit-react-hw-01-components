@@ -19,9 +19,13 @@ export default function FriendCard({ avatar, name, isOnline }) {
   );
 }
 
+FriendCard.defaultProps = {
+  avatar: 'https://vk-wiki.ru/wp-content/uploads/2019/06/user-1.png',
+};
+
 FriendCard.propTypes = {
   friend: PropTypes.shape({
-    avatar: PropTypes.string.isRequired,
+    avatar: PropTypes.string,
     name: PropTypes.string.isRequired,
     isOnline: PropTypes.bool.isRequired,
   }),
