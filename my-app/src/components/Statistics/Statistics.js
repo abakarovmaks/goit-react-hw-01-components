@@ -11,7 +11,7 @@ export default function Statistics({ title, stats }) {
       <ul className={styles.list}>
         {stats.map(item => (
           <li className={styles.item} key={item.id}>
-            <StatisticsItem label={item.label} percentage={item.percentage} />
+            <StatisticsItem {...item} />
           </li>
         ))}
       </ul>

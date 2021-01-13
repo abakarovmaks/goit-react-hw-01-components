@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import styles from './FriendListItem.module.css';
 
-export default function FriendCard({ avatar, name, isOnline }) {
+export default function FriendListItem({ avatar, name, isOnline }) {
   const activeClass = isOnline ? styles.online : styles.offline;
 
   return (
@@ -19,14 +19,13 @@ export default function FriendCard({ avatar, name, isOnline }) {
   );
 }
 
-FriendCard.defaultProps = {
+FriendListItem.defaultProps = {
   avatar: 'https://vk-wiki.ru/wp-content/uploads/2019/06/user-1.png',
+  isOnline: false,
 };
 
-FriendCard.propTypes = {
-  friend: PropTypes.shape({
-    avatar: PropTypes.string,
-    name: PropTypes.string.isRequired,
-    isOnline: PropTypes.bool.isRequired,
-  }),
+FriendListItem.propTypes = {
+  avatar: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  isOnline: PropTypes.bool,
 };
