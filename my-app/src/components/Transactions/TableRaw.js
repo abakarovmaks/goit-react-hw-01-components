@@ -12,13 +12,11 @@ export default function TableRaw({ type, amount, currency }) {
 }
 
 TableRaw.defaultProps = {
-  type: 0,
   amount: 0,
-  currency: 0,
 };
 
 TableRaw.propTypes = {
+  amount: PropTypes.string,
   type: PropTypes.string.isRequired,
-  amount: PropTypes.string.isRequired,
   currency: PropTypes.string.isRequired,
 };
