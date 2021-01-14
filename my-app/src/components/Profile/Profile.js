@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Profile.module.css';
 
-export default function Profile({ name, tag, location, avatar, stats }) {
+export default function Profile({ name, tag, location, avatar, stats = {} }) {
+  const { followers = 0, views = 0, likes = 0 } = stats;
+
   return (
     <div className={styles.profile}>
       <div className={styles.description}>
@@ -15,15 +17,15 @@ export default function Profile({ name, tag, location, avatar, stats }) {
       <ul className={styles.stats}>
         <li className={styles.item}>
           <span className={styles.label}>Followers</span>
-          <span className={styles.quantity}>{stats.followers}</span>
+          <span className={styles.quantity}>{followers}</span>
         </li>
         <li className={styles.item}>
           <span className={styles.label}>Views</span>
-          <span className={styles.quantity}>{stats.views}</span>
+          <span className={styles.quantity}>{views}</span>
         </li>
         <li className={styles.item}>
           <span className={styles.label}>Likes</span>
-          <span className={styles.quantity}>{stats.likes}</span>
+          <span className={styles.quantity}>{likes}</span>
         </li>
       </ul>
     </div>
@@ -42,8 +44,8 @@ Profile.propTypes = {
   location: PropTypes.string,
   avatar: PropTypes.string,
   stats: PropTypes.shape({
-    followers: PropTypes.number.isRequired,
-    views: PropTypes.number.isRequired,
-    likes: PropTypes.number.isRequired,
+    followers: PropTypes.number,
+    views: PropTypes.number,
+    likes: PropTypes.number,
   }),
 };

@@ -77,11 +77,11 @@
 .quantity {
   font-size: 25px;
   font-weight: 700;
-  padding: 10px;
-  border: 2px groove tomato;
+  /* padding: 10px; */
+  /* border: 2px groove tomato; */
   border-radius: 10px;
 
   color: red;
 
-  box-shadow: 2px 2px 8px -1px black;
+  /* box-shadow: 2px 2px 8px -1px black; */
 }
